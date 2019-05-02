@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    header{
+        background: cadetblue;
+    }
+    footer{
+        background: antiquewhite;
+    }
+    .text{
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
+    .left{
+      background-color: red;
+      margin-left: -100%;
+    }
+    .right{
+      background-color: #ccc;
+      margin-left: -100px;
+    }
+    .main{
+      width: 100%;
+      background-color: orange;
+    }
+    .main-content{
+      margin: 0 100px;
+    }
+    .content::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+     </style>
+ <body>
+    <header>双飞翼布局</header>
+
+    <div class="content">
+        <div class="main text">
+            <div class="main-content">main</div>
+        </div>
+        <div class="left text">
+            left
+        </div>
+        <div class="right text">
+            right
+        </div>
+    </div>
+
+<footer>footer</footer>
+ </body>
+</html>
