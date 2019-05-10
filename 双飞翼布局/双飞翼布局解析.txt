@@ -1,0 +1,12 @@
+布局步骤
+  1 给main设置width: 100%,让它始终占满窗口，这样才有自适应的效果。
+  2 为了形成在一行三栏布局，给三个方块都加上浮动float: left;（注意清除浮动，因为浮动会导致父元素高度塌陷）
+  3 接着我们要把三个方块拉到一行，这里要利用负margin的技巧:
+      left要放到main的左边，设置margin-left: -100%。因为margin的百分比是相对与父元素的，所以需要整整一行的宽度才能补偿这个margin的值，left就能到main的左边。
+      right要放到main的右边，设置margin-left的值为负right的宽，正好使main重叠right的宽度，因为设置了浮动所以right就会到main的右边。
+  4 此时存在一个小bug，main的内容会被left和right遮挡，所以需要设置padding和margin
+
+圣杯布局
+  5 可以看到，我们在main里面又加了一个内容层。如果知道盒子模型，就知道我们是不能直接给main添加margin属性，因为我们已经设置了width：100%，
+    再设置margin的话就会超过窗口的宽度，所以我们再创造一个内容层，将所有要显示的内容放到main-content中，给main-content设置margin就可以了。
+  6 因为不改变父元素所以只需要给main-content设置margin: 0 200px 0 200px;属性就可以了达到效果
