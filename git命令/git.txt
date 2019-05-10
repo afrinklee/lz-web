@@ -1,0 +1,27 @@
+//初始化
+git init
+git add 文件名
+git commit -m "first commit"
+git remote add origin git@github.com:1141178844/test01.git
+git push -u origin master
+
+//查看所有信息
+git status
+//克隆
+git clone git@github.com:laning312/mybooks.git
+//删除
+git rm -r --cached 文件名
+//重置
+git reset --hard "前六位过程码"
+
+//SSH
+需要配置公钥
+c盘用户主目录下，找.ssh目录 ， 掏出公钥 id_rsa.pub 
+ssh-keygen -t rsa -C "email"
+
+git config  user.email
+git config  user.name
+
+
+//拉取 -> 将远程origin主机的master分支拉取过来和本地的当前分支进行合并。
+git pull origin master  
